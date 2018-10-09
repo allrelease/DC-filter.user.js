@@ -8,6 +8,7 @@
 // @grant       none
 // @contributor   dot
 // @run-at document-end
+// @updateURL https://github.com/allrelease/DC-filter.user.js/raw/master/DC_filter_in_board.user.js
 // ==/UserScript==
 
 var filter_name = /^(?:두정갑|경번갑|ksy|근세돌|철구|숯불형인간)$/
