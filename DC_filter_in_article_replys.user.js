@@ -3,7 +3,9 @@
 // @namespace   http://gall.dcinside.com/
 // @include     http://gall.dcinside.com/board/view/*
 // @include     http://gall.dcinside.com/board/comment_view/*
-// @version     0.3
+// @include     http://gall.dcinside.com/mgallery/board/view/*
+// @include     http://gall.dcinside.com/board/comment/*
+// @version     0.3.1
 // @grant       none
 // @description   filter trolls by replys
 // @contributor   dot
