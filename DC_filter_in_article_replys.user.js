@@ -5,7 +5,7 @@
 // @include     http://gall.dcinside.com/board/comment_view/*
 // @include     http://gall.dcinside.com/mgallery/board/view/*
 // @include     http://gall.dcinside.com/board/comment/*
-// @version     0.3.2
+// @version     0.3.3
 // @grant       none
 // @description   filter trolls by replys
 // @contributor   dot
@@ -120,8 +120,8 @@ function throttle( fn, time ) {
     };
 }
 // 리플 차단
-//var reply_div = document.getElementById('comment_list');
-var reply_div = document.querySelector('.comment_wrap.show');
+var reply_div = document.getElementsByClassName('comment_wrap')[0];
+//var reply_div = document.querySelector('.comment_wrap.show');
 //reply_div.addEventListener('DOMNodeInserted', removeReply, true);
 reply_div.addEventListener('load', throttle(removeReply,10), true);
 //reply_div.addEventListener('DOMNodeInserted', throttle(removeReply,20), true);
