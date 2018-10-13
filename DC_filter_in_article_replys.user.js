@@ -5,7 +5,7 @@
 // @include     http://gall.dcinside.com/board/comment_view/*
 // @include     http://gall.dcinside.com/mgallery/board/view/*
 // @include     http://gall.dcinside.com/board/comment/*
-// @version     0.3.3
+// @version     0.3.4
 // @grant       none
 // @description   filter trolls by replys
 // @contributor   dot
@@ -43,9 +43,10 @@ function toggleReply() {
     replyer.innerHTML = replyer.getAttribute('hideit');
     //reply.innerHTML = unescape(reply.getAttribute('hideit'));
     reply.innerHTML = reply.getAttribute('hideit');
-    //replyer.setAttribute('hideit', 'release');
-    replyer.removeAttribute('hideit');
-    reply.removeAttribute('hideit');
+    replyer.setAttribute('hideit', 'release');
+    reply.setAttribute('hideit', 'release');
+    //replyer.removeAttribute('hideit');
+    //reply.removeAttribute('hideit');
     this.removeEventListener('click', toggleReply);
 }
 
