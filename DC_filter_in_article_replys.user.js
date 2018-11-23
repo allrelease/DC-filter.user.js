@@ -5,7 +5,7 @@
 // @include     http://gall.dcinside.com/board/comment_view/*
 // @include     http://gall.dcinside.com/mgallery/board/view/*
 // @include     http://gall.dcinside.com/board/comment/*
-// @version     0.3.4
+// @version     0.3.5
 // @grant       none
 // @description   filter trolls by replys
 // @contributor   dot
