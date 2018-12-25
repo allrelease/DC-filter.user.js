@@ -5,7 +5,7 @@
 // @include     http://gall.dcinside.com/board/comment_view/*
 // @include     http://gall.dcinside.com/mgallery/board/view/*
 // @include     http://gall.dcinside.com/board/comment/*
-// @version     0.3.6
+// @version     0.3.7
 // @grant       none
 // @description   filter trolls by replys
 // @contributor   dot
@@ -13,12 +13,12 @@
 // ==/UserScript==
 
 var filter_name = /^(?:두정갑|경번갑|ksy|근세돌|철구|숯불형인간)$/
-var filter_name_del = /(?:ㅡ|[asdㅁㄴㅇ]{6}|^(.)\1{1,2}|ㅄ|ㅂㅅ|악개.*|카지노|포항의봄|2tr|ㅇㄱㄹㅇㅂㅂㅂㄱ|ㅇㄱㄹㅇㅂㅂㅂ ㄱ|장소삼|irene|오타쿠|위키세계어|김용팔|에로망가센세|프로외노자|bluepick|W10updsrv7|야옹.*|행성.*)/
+var filter_name_del = /(?:ㅡ|[asdㅁㄴㅇ]{6}|^(.)\1{1,2}|ㅄ|ㅂㅅ|악개.*|카지노|포항의봄|2tr|ㅇㄱㄹㅇㅂㅂㅂㄱ|ㅇㄱㄹㅇㅂㅂㅂ ㄱ|장소삼|irene|오타쿠|위키세계어|김용팔|에로망가센세|프로외노자|bluepick|W10updsrv7|야옹.*|행성.*|통암기공부법)/
 var filter_name_chosung = /^(?:[-ㅁㅂㅈㄷㄳㅁㄴㅇㄹㅎㅅㅋㅌㅊㅍㄻㅀㅓㅗqwerasdfzxcvASDFㄱ01234]{1,10}|(.)\1{1,}|[,\.]{1,})$/
 var filter_name_exception = /^(?:관노|ㅅㅅㅅ)$/
 
 var filter_id = /^(?:inviolable|rumpumpumpum|ahc2003|whiteking|solodragon|electronicking)$/
-var filter_id_del = /^(?:b5346|sp0331|aerohong|whiteprince|zzizilee|logicpro|hongiro|hi300|bonnbonn|miku133|myteatime|hoho9900|contextfree|ilegan8392|yum230)$/
+var filter_id_del = /^(?:b5346|sp0331|aerohong|whiteprince|zzizilee|logicpro|hongiro|hi300|bonnbonn|miku133|myteatime|hoho9900|contextfree|ilegan8392|yum230|godkiworld|wjjong4)$/
 var filter_id_exception = /^(?:gaegogizzang)$/
 
 var filter_IP = ["1.11.*.*"]

@@ -3,7 +3,7 @@
 // @namespace   http://gall.dcinside.com/
 // @include     http://gall.dcinside.com/board/*
 // @include     http://gall.dcinside.com/mgallery/board/*
-// @version     0.3.2
+// @version     0.3.3
 // @description   filter trolls by article titles
 // @grant       none
 // @contributor   dot
@@ -12,12 +12,12 @@
 // ==/UserScript==
 
 var filter_name = /^(?:두정갑|경번갑|ksy|근세돌|철구|숯불형인간)$/
-var filter_name_del = /(?:ㅡ|[asdㅁㄴㅇ]{6}|^(.)\1{1,2}|ㅄ|ㅂㅅ|악개.*|카지노|포항의봄|2tr|ㅇㄱㄹㅇㅂㅂㅂㄱ|ㅇㄱㄹㅇㅂㅂㅂ ㄱ|장소삼|irene|오타쿠|위키세계어|김용팔|에로망가센세|프로외노자|bluepick|W10updsrv7|야옹.*|행성.*)/
+var filter_name_del = /(?:ㅡ|[asdㅁㄴㅇ]{6}|^(.)\1{1,2}|ㅄ|ㅂㅅ|악개.*|카지노|포항의봄|2tr|ㅇㄱㄹㅇㅂㅂㅂㄱ|ㅇㄱㄹㅇㅂㅂㅂ ㄱ|장소삼|irene|오타쿠|위키세계어|김용팔|에로망가센세|프로외노자|bluepick|W10updsrv7|야옹.*|행성.*|통암기공부법)/
 var filter_name_chosung = /^(?:[-ㅁㅂㅈㄷㄳㅁㄴㅇㄹㅎㅅㅋㅌㅊㅍㄻㅀㅓㅗqwerasdfzxcvASDFㄱ01234]{1,10}|(.)\1{1,}|[,\.]{1,})$/
 var filter_name_exception = /^(?:관노|ㅅㅅㅅ)$/
 
 var filter_id = /^(?:inviolable|rumpumpumpum|ahc2003|whiteking|solodragon|electronicking)$/
-var filter_id_del = /^(?:b5346|sp0331|aerohong|whiteprince|zzizilee|logicpro|hongiro|hi300|bonnbonn|miku133|myteatime|hoho9900|contextfree|ilegan8392|yum230)$/
+var filter_id_del = /^(?:b5346|sp0331|aerohong|whiteprince|zzizilee|logicpro|hongiro|hi300|bonnbonn|miku133|myteatime|hoho9900|contextfree|ilegan8392|yum230|godkiworld|wjjong4)$/
 var filter_id_exception = /^(?:gaegogizzang)$/
 
 var filter_title_del = /(?:[\S]{10,}|토토|가입|돈버는|돈벌기|사다리|머니|좋은곳|바카라|야마토|입결|카라.*해체|http\:|스피오.*|영단기|악개|www\.|[a-z]{1,}\.[a-z]{2,}\.[a-z]{2,})/
@@ -92,4 +92,54 @@ function removeTitle() {
     }
 }
 
+//추천글 리스트 삭제
+function removeRecommand() {
+	
+	//왼쪽 추천글 리스트 삭제
+	var DOM_recommand = document.getElementsByClassName("concept_txtlist")[0];
+	
+	if (!DOM_recommand) return; //마이너 갤러리는 없으므로 탈출;
+	else DOM_recommand = DOM_recommand.children;
+	
+	for(var counter = 0; counter < DOM_recommand.length; counter++)	{
+		var writer = DOM_recommand[counter].getElementsByClassName("writer")[0].textContent;
+		if (!filter_name_exception.test(writer)) {
+            //아예 지워 버림
+            if (filter_name_del.test(writer)) {
+                DOM_recommand[counter].style.visibility = 'hidden';
+            }
+		}
+	}
+	//오른쪽 내용이랑 같이 나오는 애 삭제
+	DOM_recommand = document.getElementsByClassName("concept_img")[0];
+	
+	if (!DOM_recommand) return; //마이너 갤러리는 없으므로 탈출;
+	
+	writer = DOM_recommand.getElementsByClassName("writer_info")[0].innerText.slice(6);
+	if (!filter_name_exception.test(writer)) {
+		//아예 지워 버림
+		if (filter_name_del.test(writer)) {
+			DOM_recommand.style.visibility = 'hidden';
+		}
+	}
+	
+}
+
+function throttle( fn, time ) {
+    var t = 0;
+    return function() {
+        var args = arguments,
+            ctx = this;
+
+            clearTimeout(t);
+
+        t = setTimeout( function() {
+            fn.apply( ctx, args );
+        }, time );
+    };
+}
+
 removeTitle();
+removeRecommand();
+var DOM_recommand = document.getElementsByClassName("concept_txtlist")[0];
+DOM_recommand.addEventListener('DOMNodeInserted', throttle(removeRecommand, 10), true);
