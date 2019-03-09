@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name        DC filter in article replys
-// @namespace   http://gall.dcinside.com/
-// @include     http://gall.dcinside.com/board/view/*
-// @include     http://gall.dcinside.com/board/comment_view/*
-// @include     http://gall.dcinside.com/mgallery/board/view/*
-// @include     http://gall.dcinside.com/board/comment/*
-// @version     20190127
+// @namespace   https://gall.dcinside.com/
+// @include     https://gall.dcinside.com/board/view/*
+// @include     https://gall.dcinside.com/board/comment_view/*
+// @include     https://gall.dcinside.com/mgallery/board/view/*
+// @include     https://gall.dcinside.com/board/comment/*
+// @version     20190309
 // @grant       none
 // @description   filter trolls by replys
 // @contributor   dot

@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name        DC filter in board
-// @namespace   http://gall.dcinside.com/
-// @include     http://gall.dcinside.com/board/*
-// @include     http://gall.dcinside.com/mgallery/board/*
-// @version     20190126
+// @namespace   https://gall.dcinside.com/
+// @include     https://gall.dcinside.com/board/*
+// @include     https://gall.dcinside.com/mgallery/board/*
+// @version     20190309
 // @description   filter trolls by article titles
 // @grant       none
 // @contributor   dot
