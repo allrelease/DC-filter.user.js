@@ -5,7 +5,7 @@
 // @include     https://gall.dcinside.com/board/comment_view/*
 // @include     https://gall.dcinside.com/mgallery/board/view/*
 // @include     https://gall.dcinside.com/board/comment/*
-// @version     20190309
+// @version     20190510
 // @grant       none
 // @description   filter trolls by replys
 // @contributor   dot
@@ -18,7 +18,7 @@ var filter_name_chosung = /^(?:[-ㅁㅂㅈㄷㄳㅁㄴㅇㄹㅎㅅㅋㅌㅊㅍ�
 var filter_name_exception = /^(?:관노|ㅅㅅㅅ)$/
 
 var filter_id = /^(?:inviolable|rumpumpumpum|ahc2003|whiteking|solodragon|electronicking)$/
-var filter_id_del = /^(?:b5346|sp0331|aerohong|whiteprince|zzizilee|logicpro|hongiro|hi300|bonnbonn|miku133|myteatime|hoho9900|contextfree|ilegan8392|yum230|godkiworld|wjjong4)$/
+var filter_id_del = /^(?:b5346|sp0331|aerohong|whiteprince|zzizilee|logicpro|hongiro|hi300|bonnbonn|miku133|myteatime|hoho9900|contextfree|ilegan8392|yum230|godkiworld|wjjong4|godotgame)$/
 var filter_id_exception = /^(?:gaegogizzang)$/
 
 var filter_IP = ["1.11.*.*"]

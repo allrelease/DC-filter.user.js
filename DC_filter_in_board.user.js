@@ -3,7 +3,7 @@
 // @namespace   https://gall.dcinside.com/
 // @include     https://gall.dcinside.com/board/*
 // @include     https://gall.dcinside.com/mgallery/board/*
-// @version     20190309
+// @version     20190510
 // @description   filter trolls by article titles
 // @grant       none
 // @contributor   dot
@@ -17,7 +17,7 @@ var filter_name_chosung = /^(?:[-ㅁㅂㅈㄷㄳㅁㄴㅇㄹㅎㅅㅋㅌㅊㅍ�
 var filter_name_exception = /^(?:관노|ㅅㅅㅅ)$/
 
 var filter_id = /^(?:inviolable|rumpumpumpum|ahc2003|whiteking|solodragon|electronicking)$/
-var filter_id_del = /^(?:b5346|sp0331|aerohong|whiteprince|zzizilee|logicpro|hongiro|hi300|bonnbonn|miku133|myteatime|hoho9900|contextfree|ilegan8392|yum230|godkiworld|wjjong4)$/
+var filter_id_del = /^(?:b5346|sp0331|aerohong|whiteprince|zzizilee|logicpro|hongiro|hi300|bonnbonn|miku133|myteatime|hoho9900|contextfree|ilegan8392|yum230|godkiworld|wjjong4|godotgame)$/
 var filter_id_exception = /^(?:gaegogizzang)$/
 
 var filter_title_del = /(?:[\S]{10,}|토토|가입|돈버는|돈벌기|사다리|머니|좋은곳|바카라|야마토|입결|카라.*해체|http\:|스피오.*|영단기|악개|www\.|[a-z]{1,}\.[a-z]{2,}\.[a-z]{2,})/
