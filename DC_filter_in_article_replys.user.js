@@ -5,7 +5,7 @@
 // @include     https://gall.dcinside.com/board/comment_view/*
 // @include     https://gall.dcinside.com/mgallery/board/view/*
 // @include     https://gall.dcinside.com/board/comment/*
-// @version     20190510
+// @version     20190522
 // @grant       none
 // @description   filter trolls by replys
 // @contributor   dot

@@ -3,7 +3,7 @@
 // @namespace   https://gall.dcinside.com/
 // @include     https://gall.dcinside.com/board/*
 // @include     https://gall.dcinside.com/mgallery/board/*
-// @version     20190510
+// @version     20190522
 // @description   filter trolls by article titles
 // @grant       none
 // @contributor   dot
